@@ -1,7 +1,13 @@
 function changeWeather(weather) {
   let CTValue = document.querySelector(".current-temperature-value");
+  let Hmd = document.querySelector(".Hmd");
+  let wnd = document.querySelector(".wnd");
+  let HmdFR = weather.data.temperature.humidity;
+  let wndFR = weather.data.wind.speed;
   let tempFR = Math.round(weather.data.temperature.current);
   CTValue.innerHTML = tempFR;
+  Hmd.innerHTML = HmdFR;
+  wnd.innerHTML = wndFR;
 }
 
 function search(event) {
